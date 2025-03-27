@@ -1,0 +1,434 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "american";
+  src: url(/front/assets/font/american/American\ Typewriter\ Bold.woff2) format("woff2");
+  src: url(/front/assets/font/american/American\ Typewriter\ Bold.woff) format("woff");
+  src: url(/front/assets/font/american/American\ Typewriter\ Bold.ttf) format("truetype");
+  src: url(/front/assets/font/american/American\ Typewriter\ Bold.svg) format("svg");
+  src: url(/front/assets/font/american/American\ Typewriter\ Bold.eot) format("eot");
+  src: url(/front/assets/font/american/American\ Typewriter\ Bold.otf) format("opentype");
+}
+* {
+  scroll-behavior: smooth;
+}
+
+html {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: rgb(255, 255, 255);
+  position: relative;
+  text-decoration: none;
+}
+
+a:after {
+  content: "";
+  position: absolute;
+  transform: scaleX(0);
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  transition: transform 0.25s ease-out;
+  bottom: 0;
+  left: 0;
+}
+
+a:hover {
+  color: rgb(177, 177, 196) !important;
+  font-style: italic;
+}
+
+a:hover:after {
+  transform: scaleX(1);
+}
+
+button {
+  padding: 8px;
+  border-radius: 8px;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+
+button:hover {
+  font-style: italic;
+}
+
+button.info {
+  color: white;
+  background-color: rgb(255, 165, 0);
+}
+
+button.info:hover {
+  background-color: white;
+  color: rgb(255, 165, 0);
+  transition: background-color 1s;
+}
+
+#scroll-top {
+  position: fixed;
+  display: none;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgb(255, 165, 0);
+  color: white;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+main section#hero-header {
+  background: url("/front/assets/images/crypto.jpg") no-repeat center center/cover;
+  color: #212121;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main section#hero-header h1 {
+  font-family: "american";
+  font-size: 3rem;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background: rgba(228, 206, 206, 0.5);
+  font-size: 1.5rem;
+  color: goldenrod;
+  text-align: center;
+  width: 80%;
+  padding: 8px 0;
+  text-align: center;
+  border-bottom: 0 0 8px 8px;
+}
+main section#hero-header #content {
+  margin-top: 1rem;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background: rgba(228, 206, 206, 0.5);
+  display: flex;
+  width: 80%;
+  color: goldenrod;
+  border-radius: 0 0 8px 8px;
+  padding-bottom: 8px;
+}
+main section#hero-header #content #p-left {
+  padding: 8px;
+}
+main section#hero-header #content button {
+  margin: auto;
+}
+main section#hero-header #content div {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+}
+main section#hero-header #content div p {
+  padding: 0 0 8px 8px;
+}
+main section:nth-child(1) {
+  height: calc(var(--vh, 1vh) * 100);
+  min-height: 100vh;
+}
+main section:not(:nth-child(1)) {
+  height: 100px;
+}
+
+html[data-theme=light] {
+  background-color: #ececec;
+  color: #212121;
+}
+html[data-theme=light] a {
+  color: #212121;
+}
+html[data-theme=light] header {
+  background: #ececec;
+}
+html[data-theme=light] header nav #nav i[data-theme-toggler] {
+  color: #212121;
+}
+
+html[data-theme=dark] {
+  background-color: #212121;
+  color: #ececec;
+}
+html[data-theme=dark] a {
+  color: #ececec;
+}
+html[data-theme=dark] header {
+  background: #212121;
+}
+html[data-theme=dark] header nav #nav i[data-theme-toggler] {
+  color: #ececec;
+}
+
+@media only screen and (max-width: 768px) {
+  html[data-theme=light] header nav #nav {
+    background-color: #212121;
+  }
+  html[data-theme=light] header nav #nav ul li {
+    color: #ececec;
+  }
+  html[data-theme=light] header nav #nav ul li a {
+    color: #ececec;
+  }
+  html[data-theme=light] header nav #nav i[data-theme-toggler] {
+    color: #ececec;
+  }
+  html[data-theme=dark] header nav #nav {
+    background-color: #ececec;
+  }
+  html[data-theme=dark] header nav #nav ul li {
+    color: #212121;
+  }
+  html[data-theme=dark] header nav #nav ul li a {
+    color: #212121;
+  }
+  html[data-theme=dark] header nav #nav i[data-theme-toggler] {
+    color: #212121;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main section#hero-header h1 {
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    background: rgba(228, 206, 206, 0.5);
+    font-size: 1.5rem;
+    color: goldenrod;
+    text-align: center;
+    max-width: 80%;
+  }
+  main section#hero-header #content {
+    max-width: 80%;
+  }
+  main section#hero-header #content #p-left {
+    display: none;
+  }
+}
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+header #logo img {
+  height: 50px;
+  width: 50px;
+}
+header nav {
+  max-width: 1280px;
+  display: flex;
+  margin: 8px auto;
+  justify-content: space-between;
+}
+header nav #nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-around;
+}
+header nav #nav ul {
+  flex-grow: 1;
+  justify-content: space-around;
+  display: flex;
+}
+header nav #nav ul li {
+  align-items: center;
+  align-content: center;
+}
+header nav #nav ul li i {
+  display: none;
+}
+header nav #toggle-nav {
+  display: none;
+}
+
+@media only screen and (max-width: 1280px) {
+  header nav {
+    margin: 8px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  header nav #nav {
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    padding: 8px;
+    transform: translate(100vw, -50%);
+    transition: transform 0.5s;
+    background: rgb(130, 130, 159);
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    max-width: 200px;
+    min-height: 50vh;
+    height: calc(var(--vh, 1vh) * 100);
+    border-radius: 8px;
+    height: 70%;
+  }
+  header nav #nav ul {
+    flex-direction: column;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  header nav #nav ul li {
+    display: flex;
+    align-items: center;
+  }
+  header nav #nav ul li a {
+    padding: 8px 0;
+  }
+  header nav #nav ul li i {
+    display: block;
+    font-size: 16px;
+    margin-right: 1rem;
+  }
+  header nav #nav i[data-theme-toggler] {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+  header nav #nav.mobile {
+    transform: translate(0, -50%);
+  }
+  header nav i#toggle-nav {
+    display: block;
+    font-size: 20px;
+  }
+}/*# sourceMappingURL=style.css.map */
